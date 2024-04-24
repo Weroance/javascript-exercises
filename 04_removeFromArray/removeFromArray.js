@@ -1,17 +1,9 @@
 const removeFromArray = function(removeFromThese,...removeThese) {
-
-    //remover function to for loop over removeThese, is equal?
-    function remover(currentValue){
-        for(let i = 0; i < removeThese.length; i++){
-            
-          if ( currentValue === removeThese[i]){
-            return false;
-          }
-        }
-        return true
-    }
-    return removeFromThese.filter(remover)
+  return removeFromThese.filter(val => !removeThese.includes(val))
+        //   return array.filter(val => !args.includes(val))
+        // }
 };
+
 
 // Do not edit below this line
 module.exports = removeFromArray;
